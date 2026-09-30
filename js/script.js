@@ -11,7 +11,12 @@ async function getcategories() {
         <h3>${value.strCategory}</h3>
 
         </div>`
-
+// Hamburger menu categories
+    menuCategories.innerHTML += `
+        <div class="menu-item" onclick="getmealdetails('${value.strCategory}')">
+            ${value.strCategory}
+        </div>
+    `;
 
 });
 
@@ -89,3 +94,15 @@ let categoryDescription = document.getElementById("categoryDescription");
 
 
 
+let menuBtn = document.getElementById("menu-btn");
+let sideMenu = document.getElementById("sideMenu");
+let closeMenu = document.getElementById("closeMenu");
+let menuCategories = document.getElementById("menuCategories");
+
+menuBtn.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+});
