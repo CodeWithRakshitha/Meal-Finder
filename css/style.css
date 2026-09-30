@@ -117,6 +117,7 @@
     display: block;
 }
 
+
 /* meal section and cards */
 /* MEALS SECTION */
 
@@ -181,8 +182,6 @@
 }
 
 
-
-
 /*hamburger bar*/
 .side-menu {
     position: fixed;
@@ -223,4 +222,3 @@
 .menu-item:hover {
     color: rgb(238, 91, 24);
 }
-

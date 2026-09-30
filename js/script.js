@@ -54,7 +54,11 @@ async function getcategories() {
    
     })
 
+//--------------------------------------------------    
 
+let categoryInfo = document.getElementById("categoryInfo");
+let categoryName = document.getElementById("categoryName");
+let categoryDescription = document.getElementById("categoryDescription");
     async function getmealdetails(categories) {
 
     mealsContainer.innerHTML = "";
@@ -82,3 +86,6 @@ async function getcategories() {
         `;
     });
 }
+
+
+
