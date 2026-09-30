@@ -64,19 +64,40 @@ async function getcategories() {
 let categoryInfo = document.getElementById("categoryInfo");
 let categoryName = document.getElementById("categoryName");
 let categoryDescription = document.getElementById("categoryDescription");
-    async function getmealdetails(categories) {
 
-    mealsContainer.innerHTML = "";
 
+async function getmealdetails(categories) {
+
+    // Get category information
     let response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories}`
+        `https://www.themealdb.com/api/json/v1/1/categories.php`
     );
 
     let data = await response.json();
 
+    let category = data.categories.find(
+        value => value.strCategory === categories
+    );
+
+    // Show category information
+    categoryName.innerText = category.strCategory;
+    categoryDescription.innerText = category.strCategoryDescription;
+
+    categoryInfo.style.display = "block";
+
+
+    // Get meals
+    let mealResponse = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories}`
+    );
+
+    let mealData = await mealResponse.json();
+
+    mealsContainer.innerHTML = "";
+
     meals_section.style.display = "block";
 
-    data.meals.forEach((value) => {
+    mealData.meals.forEach((value) => {
 
         mealsContainer.innerHTML += `
             <div class="meal-card" onclick="getMealDetails('${value.idMeal}')">
@@ -91,9 +112,6 @@ let categoryDescription = document.getElementById("categoryDescription");
         `;
     });
 }
-
-
-
 let menuBtn = document.getElementById("menu-btn");
 let sideMenu = document.getElementById("sideMenu");
 let closeMenu = document.getElementById("closeMenu");

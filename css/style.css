@@ -348,3 +348,23 @@
     line-height: 1.7;
     font-size: 14px;
 }
+
+
+/* top description */
+.category-info {
+    padding: 35px 30px;
+    border: 1px solid rgb(238, 91, 24);
+    margin: 40px 30px;
+    background-color: white;
+}
+
+.category-info h2 {
+    color: rgb(238, 91, 24);
+    margin-bottom: 20px;
+}
+
+.category-info p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
