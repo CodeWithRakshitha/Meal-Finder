@@ -53,4 +53,32 @@ async function getcategories() {
     });
    
     })
-    
+
+
+    async function getmealdetails(categories) {
+
+    mealsContainer.innerHTML = "";
+
+    let response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories}`
+    );
+
+    let data = await response.json();
+
+    meals_section.style.display = "block";
+
+    data.meals.forEach((value) => {
+
+        mealsContainer.innerHTML += `
+            <div class="meal-card" onclick="getMealDetails('${value.idMeal}')">
+
+                <img src="${value.strMealThumb}">
+
+                <h3>${categories}</h3>
+
+                <p>${value.strMeal}</p>
+
+            </div>
+        `;
+    });
+}
