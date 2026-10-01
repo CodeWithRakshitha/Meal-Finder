@@ -374,11 +374,8 @@
 }
 
 
-/* -------------------------- */
 
-/* ============================= */
-/* 📱 MOBILE - 0 to 600px */
-/* ============================= */
+/*  MOBILE - 0 to 600px */
 
 @media screen and (max-width: 600px) {
 
@@ -478,7 +475,7 @@
     }
 
 
-    /* CATEGORY INFORMATION */
+    
     .category-info {
         margin: 25px 15px;
         padding: 25px 20px;
@@ -531,7 +528,7 @@
     }
 
 
-    /* INGREDIENTS */
+    
     .ingredients {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -542,7 +539,7 @@
     }
 
 
-    /* MEASUREMENTS */
+    
     .measurements {
         grid-template-columns: 1fr;
         padding: 15px;
@@ -553,7 +550,7 @@
     }
 
 
-    /* INSTRUCTIONS */
+    
     .instructions {
         font-size: 14px;
         line-height: 1.6;
@@ -561,3 +558,128 @@
 }
 
 
+
+/* TABLET - 601px to 900px */
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+
+    .header {
+        height: 85px;
+    }
+
+    .header h2 {
+        font-size: 30px;
+    }
+
+
+
+    .hero {
+        height: 400px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+
+    
+    #searchInput {
+        width: 400px;
+        max-width: 70vw;
+    }
+
+
+    
+    .categories-section {
+        padding: 60px 25px;
+    }
+
+    #categoriesContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .category-card img {
+        height: 200px;
+    }
+
+
+    /* MEALS */
+    .meals-section {
+        padding: 60px 25px;
+    }
+
+    #mealsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .meal-card img {
+        height: 210px;
+    }
+
+
+    /* CATEGORY INFORMATION */
+    .category-info {
+        margin: 30px 25px;
+    }
+
+
+    /* MEAL DETAILS */
+    .meal-details-section {
+        padding: 40px 25px;
+    }
+
+    #mealDetails {
+        padding: 25px;
+    }
+
+    .meal-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .meal-top img {
+        width: 100%;
+    }
+
+    .meal-info h1 {
+        font-size: 23px;
+    }
+
+    .meal-info p {
+        font-size: 17px;
+    }
+
+    .ingredients {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/*  SMALL LAPTOP - 901px to 1200px */
+
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+
+    #categoriesContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #mealsContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .meal-top {
+        gap: 30px;
+    }
+
+    .meal-info p {
+        font-size: 18px;
+    }
+}
