@@ -111,6 +111,7 @@ async function getmealdetails(categories) {
             </div>
         `;
     });
+    window.scrollTo(1, 0);
 }
 let menuBtn = document.getElementById("menu-btn");
 let sideMenu = document.getElementById("sideMenu");
@@ -255,3 +256,18 @@ for (let i = 1; i <= 20; i++) {
 
     `;
 }
+
+
+let mealFinderHome = document.getElementById("mealFinderHome");
+
+mealFinderHome.addEventListener("click", () => {
+
+    meal_details_section.style.display = "none";
+    meals_section.style.display = "none";
+    categoryInfo.style.display = "none";
+    sideMenu.classList.remove("active");
+
+    document.querySelector(".categories-section").style.display = "block";
+
+    window.scrollTo(0, 0);
+});
